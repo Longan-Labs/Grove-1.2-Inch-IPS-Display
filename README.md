@@ -10,8 +10,6 @@ last_update:
   author: Stephen Lo
 ---
 
-
-<!-- ![](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/IMG_0012a.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Longan-Labs/Grove-1.2-Inch-IPS-Display/main/images/2-Grove-1.2-Inch-IPS-Display-font.jpg" alt="pir" width={600} height="auto" /></p>
 
 The Grove-1.2 Inch IPS Display is a meticulously crafted 1.2-inch serial liquid crystal display brought to you by Seeedstudio. Offering a superior resolution of 240x240, this display provides crystal clear, colorful image representation. The design rationale behind this display is to present a simple, high-quality display solution to meet the needs of various DIY or Internet of Things (IoT) projects.
@@ -51,9 +49,7 @@ Moreover, we have chosen ST7789 as the driver IC for the display and have prepar
 
 ### Pin Map
 
-<!-- ![](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/pin.jpg) -->
-  <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Longan-Labs/Grove-1.2-Inch-IPS-Display/main/images/hw.png" alt="pir" width={600} height="auto" /></p>
-
+<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Longan-Labs/Grove-1.2-Inch-IPS-Display/main/images/hw.png" alt="pir" width={600} height="auto" /></p>
 
 ## Getting Started
 
@@ -78,7 +74,7 @@ Moreover, we have chosen ST7789 as the driver IC for the display and have prepar
     **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
 :::
 
-- **Step 1.** Connect Grove - VOC Gas Sensor (SGP40) to D7(D7/D8) port  of Grove-Base Shield.
+- **Step 1.** Connect Grove-1.2 Inch IPS Display to D7(D7/D8) port  of Grove-Base Shield.
 
 - **Step 2.** Plug Grove - Base Shield into Seeeduino.
 
@@ -87,10 +83,10 @@ Moreover, we have chosen ST7789 as the driver IC for the display and have prepar
 <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Longan-Labs/Grove-1.2-Inch-IPS-Display/main/images/connection.jpg" alt="pir" width={600} height="auto" /></p>
 
 :::note
-	If we don't have Grove Base Shield, We also can directly connect Grove - Smart Air Quality Sensor (SGP41) to Seeeduino as below.
+	If we don't have Grove Base Shield, We also can directly connect Grove-1.2 Inch IPS Display to Seeeduino as below.
 :::
 
-| Seeeduino     | Grove - VOC Gas Sensor (SGP40) |
+| Seeeduino     | Grove-1.2 Inch IPS Display |
 |---------------|-------------------------|
 | 5V            | Red                     |
 | GND           | Black                   |
@@ -107,10 +103,9 @@ Moreover, we have chosen ST7789 as the driver IC for the display and have prepar
 
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
-![](https://raw.githubusercontent.com/Longan-Labs/SGP40/main/images/result.png)
+- **Step 5.** You will find Hello World printed on the display.
 
-
-## Fast IO
+## Fast IO with Arduino UNO
 
 Operating Arduino's I/O pins directly through registers can provide higher efficiency and speed, as opposed to using the standard `digitalWrite()` function. However, this method generally requires a more in-depth understanding of Arduino hardware and the workings of microcontrollers.
 
@@ -149,12 +144,12 @@ This statement sets the 5th bit of PORTB to 0 without changing other bits. This 
 
 The following shows all the ports on Arduino UNO and their corresponding registers:
 
-** Digital Ports**
+** Digital Ports **
 
 - Digital ports 0 - 7 correspond to register PORTD, bits PORTD0 to PORTD7
 - Digital ports 8 - 13 correspond to register PORTB, bits PORTB0 to PORTB5
 
-** Analog Input Ports * 
+** Analog Input Ports * *
 
 - Analog input ports A0 - A5 correspond to register PORTC, bits PORTC0 to PORTC5
 
