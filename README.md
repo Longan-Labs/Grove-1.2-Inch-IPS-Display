@@ -84,10 +84,7 @@ Moreover, we have chosen ST7789 as the driver IC for the display and have prepar
 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
-
-<!-- ![](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/3.jpg) -->
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/3.jpg" alt="pir" width={600} height="auto" /></p>
-
+<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Longan-Labs/Grove-1.2-Inch-IPS-Display/main/images/connection.jpg" alt="pir" width={600} height="auto" /></p>
 
 :::note
 	If we don't have Grove Base Shield, We also can directly connect Grove - Smart Air Quality Sensor (SGP41) to Seeeduino as below.
