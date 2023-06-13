@@ -12,7 +12,7 @@ last_update:
 
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/IMG_0012a.jpg) -->
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/IMG_0012a.jpg" alt="pir" width={600} height="auto" /></p>
+  <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Longan-Labs/Grove-1.2-Inch-IPS-Display/main/images/2-Grove-1.2-Inch-IPS-Display-font.jpg" alt="pir" width={600} height="auto" /></p>
 
 The Grove-1.2 Inch IPS Display is a meticulously crafted 1.2-inch serial liquid crystal display brought to you by Seeedstudio. Offering a superior resolution of 240x240, this display provides crystal clear, colorful image representation. The design rationale behind this display is to present a simple, high-quality display solution to meet the needs of various DIY or Internet of Things (IoT) projects.
 
@@ -36,8 +36,6 @@ Moreover, we have chosen ST7789 as the driver IC for the display and have prepar
 - **Reliable Driver IC:** The display uses ST7789 as its driver IC. Its open-source driver library and example code make it easier for users to get started.
 - **Wide Operating Temperature:** The working temperature range of -20 to 70 degrees Celsius makes this display suitable for various environments.
 
-
-## Applications
 
 ## Application Ideas
 
