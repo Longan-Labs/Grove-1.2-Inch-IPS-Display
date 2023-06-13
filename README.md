@@ -114,14 +114,15 @@ Moreover, we have chosen ST7789 as the driver IC for the display and have prepar
 
 ## Schematic Online Viewer
 
-<div className="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/SGP40/raw/main/Grove%20-%20VOC%20Gas%20Sensor%20(SGP40).zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
+<div className="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/Grove-1.2-Inch-IPS-Display/raw/main/Grove%20-%20RGB%20OLED%20Display%201.22''%20(ST7789).zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
 ## Resources
 
-- **[ZIP]** [Grove - VOC Gas Sensor (SGP40)](https://github.com/Longan-Labs/SGP40/raw/main/Grove%20-%20VOC%20Gas%20Sensor%20(SGP40).zip)
-- **[PDF]** [SGP40 Datasheet](https://github.com/Longan-Labs/SGP40/blob/main/Sensirion_Gas_Sensors_Datasheet_SGP40-3135293.pdf)
-- **[GITHUB]** [Arduino Library for SGP40](https://github.com/Longan-Labs/arduino-i2c-sgp40)
+- **[ZIP]** [Eagle File for Grove-1.2 Inch IPS Display](https://github.com/Longan-Labs/Grove-1.2-Inch-IPS-Display/raw/main/Grove%20-%20RGB%20OLED%20Display%201.22''%20(ST7789).zip)
+- **[PDF]** [Datasheet for the Display](https://github.com/Longan-Labs/Grove-1.2-Inch-IPS-Display/blob/main/datasheet_WLK1201SPI-4PIN%20.pdf)
+- **[PDF]** [ST7789 Spec](https://github.com/Longan-Labs/Grove-1.2-Inch-IPS-Display/blob/main/ST7789V_SPEC_V1.2.pdf)
+- **[GITHUB]** [Arduino Library](https://github.com/Longan-Labs/Arduino_ST7789_Fast/tree/master)
 
 ## Tech Support
 If you have any technical issue.  submit the issue into our [forum](https://forum.seeedstudio.com/).
