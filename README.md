@@ -67,7 +67,7 @@ Moreover, we have chosen ST7789 as the driver IC for the display and have prepar
 
 **Materials required**
 
-| Seeeduino V4.2 | Base Shield| Grove - VOC Gas Sensor (SGP40) |
+| Seeeduino V4.2 | Base Shield| Grove-1.2 Inch IPS Display |
 |--------------|-------------|-----------------|
 |<p><img src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://raw.githubusercontent.com/Longan-Labs/Grove-1.2-Inch-IPS-Display/main/images/small.jpg" alt="pir" width={500} height="auto" /></p>|
 |<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/-Grove-VOC-and-eCO2-Gas-Sensor-(SGP30)-p-3071.html" target="_blank">Get One Now</a>|
@@ -78,7 +78,7 @@ Moreover, we have chosen ST7789 as the driver IC for the display and have prepar
     **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
 :::
 
-- **Step 1.** Connect Grove - VOC Gas Sensor (SGP40) to **I2C** port  of Grove-Base Shield.
+- **Step 1.** Connect Grove - VOC Gas Sensor (SGP40) to D7(D7/D8) port  of Grove-Base Shield.
 
 - **Step 2.** Plug Grove - Base Shield into Seeeduino.
 
@@ -98,19 +98,17 @@ Moreover, we have chosen ST7789 as the driver IC for the display and have prepar
 | 5V            | Red                     |
 | GND           | Black                   |
 | SDA           | White                   |
-| SCL           | Yellow                  |
+| SCK           | Yellow                  |
 
 #### Software
 
-- **Step 1.** Download the [SGP40 Arduino Library](https://github.com/Longan-Labs/arduino-i2c-sgp40) from Github.
+- **Step 1.** Download the [Arduino Library](https://github.com/Longan-Labs/Grove-1.2-Inch-IPS-Display) from Github.
 
 - **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
-- **Step 3.** After downloading and installing the library correctly, you can find an example program named exampleUsage.ino in the examples folder. This program is designed for the SGP40 sensor.
+- **Step 3.** After downloading and installing the library correctly, you can find an example program named *ST7789_HelloWorld.ino* in the examples folder. This program is designed for the Grove-1.2 Inch IPS Display.
 
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
-
-- **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. if every thing goes well, you will get the result.
 
 ![](https://raw.githubusercontent.com/Longan-Labs/SGP40/main/images/result.png)
 
