@@ -52,7 +52,7 @@ Moreover, we have chosen ST7789 as the driver IC for the display and have prepar
 ### Pin Map
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/pin.jpg) -->
-  <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Longan-Labs/SGP40/main/images/pinmap.png" alt="pir" width={600} height="auto" /></p>
+  <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Longan-Labs/Grove-1.2-Inch-IPS-Display/main/images/hw.png" alt="pir" width={600} height="auto" /></p>
 
 
 ## Getting Started
