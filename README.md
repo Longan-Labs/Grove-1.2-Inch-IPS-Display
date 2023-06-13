@@ -109,6 +109,97 @@ Moreover, we have chosen ST7789 as the driver IC for the display and have prepar
 
 ![](https://raw.githubusercontent.com/Longan-Labs/SGP40/main/images/result.png)
 
+
+## Fast IO
+
+Operating Arduino's I/O pins directly through registers can provide higher efficiency and speed, as opposed to using the standard `digitalWrite()` function. However, this method generally requires a more in-depth understanding of Arduino hardware and the workings of microcontrollers.
+
+If you wish to utilize faster I/O, you'll need to make some modifications in the `Arduino_ST7789_Fast.h` file. Firstly, you should change line 20 to: `#define FAST_IO 1`. Additionally, between lines 23 and 26, write the code to set the IO high and low. Below is an example of using D7/D8:
+
+```Arduino
+#define FAST_IO 1
+
+#if FAST_IO
+#define LCD_SCK_SET PORTD |= (1 << PORTD7); // SET SCK HIGH
+#define LCD_SDA_SET PORTB |= (1 << PORTB0); // SET SDA HIGH
+#define LCD_SCK_CLR PORTD &= ~(1 << PORTD7); // SET SCK LOW
+#define LCD_SDA_CLR PORTB &= ~(1 << PORTB0); // SET SDA LOW
+#endif
+```
+
+Below is a brief tutorial on how to use registers to control I/O pins on Arduino UNO:
+
+Arduino UNO has three ports, labeled as B, C, and D. Each port has a corresponding data register, which are PORTB, PORTC, and PORTD. These registers can be used to directly control I/O pins.
+
+For instance, if you want to set digital pin 13 (corresponding to the 5th bit of PORTB, or PORTB5) to HIGH, you can write as follows:
+
+```Arduino
+PORTB |= (1 << 5);
+```
+
+This statement sets the 5th bit of PORTB to 1 without changing other bits. This is achieved via the bitwise OR operator (|=) and the left-shift operator (<<).
+
+Likewise, if you want to set digital pin 13 to LOW, you can write as follows:
+
+```Arduino
+PORTB &= ~(1 << 5);
+```
+
+This statement sets the 5th bit of PORTB to 0 without changing other bits. This is achieved via the bitwise AND operator (&=) and the bitwise NOT operator (~).
+
+The following shows all the ports on Arduino UNO and their corresponding registers:
+
+** Digital Ports**
+
+- Digital ports 0 - 7 correspond to register PORTD, bits PORTD0 to PORTD7
+- Digital ports 8 - 13 correspond to register PORTB, bits PORTB0 to PORTB5
+
+** Analog Input Ports * 
+
+- Analog input ports A0 - A5 correspond to register PORTC, bits PORTC0 to PORTC5
+
+Analog input ports can also function as digital I/O, corresponding to digital pin numbers 14 to 19. For instance, A0 can also serve as digital pin 14.
+
+Each I/O register also has two related registers to control the mode (input or output) of the pins and the pull-up resistors of input pins. For instance, the control registers for PORTD are DDRD and PIND. The DDRx register is used to set the pin mode, and the PINx register is used to read the pin state.
+
+Before writing to the `PORTx` register, you should first ensure that the corresponding `DDRx` register is set correctly. For example, if you want to set `PD0` as output and output HIGH, you should set the `DDRD` register first:
+
+```cpp
+DDRD |= (1 << 0);  // Set PD0 as output
+PORTD |= (1 << 0);  // Output HIGH to PD0
+```
+
+This information can be found in the datasheet of ATmega328P, which is the microcontroller of Arduino UNO. If you are using another Arduino model, you may need to refer to the datasheet of the respective microcontroller as different microcontrollers may have different port and register layouts.
+
+When manipulating registers, it is essential to exercise caution, as any erroneous operation may impact the status of other pins or even the function of the microcontroller.
+
+Users who want to use the register operation mode of this product need to understand and implement the above knowledge and skills independently.
+
+
+
+## FAQ
+
+1. **The screen does not work when I reprogram it while the screen is connected.**
+
+A: If your program is constantly communicating with the screen, reprogramming can interrupt this process, causing the screen to malfunction. You can try turning off the power to restore normal screen operation.
+
+2. **Is there a faster way to drive it?**
+
+A: Yes, you can actually use hardware SPI to drive it. We will modify the library to support the SPI part in the future.
+
+3. **What kind of power supply should I use for the display?**
+
+A: The circuit board can accept an input voltage of 3.3V or 5V, so you can use a power supply within this range.
+
+4. **Can I use the display under extreme temperature conditions?**
+
+A: The display has a working temperature range of -20 to 70 degrees Celsius. However, for optimal performance and longevity, it's recommended to operate the display within normal room temperature conditions.
+
+5. **The colors on my display do not look right. What could be the problem?**
+
+A: Please ensure the display is correctly initialized in your code and you're using the correct color values. If you're still facing issues, there may be a problem with the display or the connecting wires. Please check the connections or try with another display if available.
+
+
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/Grove-1.2-Inch-IPS-Display/raw/main/Grove%20-%20RGB%20OLED%20Display%201.22''%20(ST7789).zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
